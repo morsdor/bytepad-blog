@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://bytepad-blog.web.app/sitemap.xml

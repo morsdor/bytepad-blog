@@ -1,6 +1,9 @@
 {
   "scripts": {
-    "build" : "hugo"
+    "serve": "hugo server",
+    "build" : "npm run copy && hugo",
+    "copy": "xcopy /y robots.txt public"
+
   },
 
   "dependencies": {
