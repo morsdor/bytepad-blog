@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "serve": "hugo server",
     "build" : "hugo"
   },
 
