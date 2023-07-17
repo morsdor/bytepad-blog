@@ -3,3 +3,4 @@ resources
 assets/jsconfig.json
 .hugo_build.lock
 node_modules
+firebase-debug.log
