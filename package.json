@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "build" : "hugo"
+  },
+
   "dependencies": {
     "firebase": "^10.0.0"
   }
