@@ -44,6 +44,42 @@ Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli Leleg
 
 Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel **mitis temploque** vocatus, inque alis, *oculos nomen* non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides **parte**.
 
+
+
+```sh
+hugo mod init github.com/me/my-new-blog
+```
+
+Then import the theme as a dependency adding the following line to the `module` section of your site's configuration file.
+
+```toml
+# config.toml
+[[module.imports]]
+path = "github.com/CaiJimmy/hugo-theme-stack/v3"
+```
+
+```yaml
+# config.yaml
+module:
+  imports:
+    - path: github.com/CaiJimmy/hugo-theme-stack/v3
+```
+
+This makes Hugo use the latest stable `v3` version of the theme (available in release page, which probably won't coincide with the latest commit in the `master` branch).
+
+To update the theme to the latest version, run the following command:
+
+```sh
+hugo mod get -u github.com/CaiJimmy/hugo-theme-stack/v3
+hugo mod tidy
+```
+
+::: info
+In the future, if a new major version of the theme is released, you will need to manually update the version number in the `path` field.
+:::
+
+:tent:
+
 {{< css.inline >}}
 <style>
 .canon { background: white; width: 100%; height: auto; }
