@@ -1,6 +1,7 @@
 ---
 title: "Search"
 slug: "search"
+description: Search box
 layout: "search"
 outputs:
     - html
