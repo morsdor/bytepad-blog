@@ -1,7 +1,7 @@
 {
   "scripts": {
     "serve": "hugo server",
-    "build" : "npm run pcopy && hugo",
+    "build" : "hugo && npm run pcopy",
     "pcopy": "cp ./robots.txt ./public"
 
   },
