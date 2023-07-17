@@ -1,5 +1,6 @@
 ---
 title: Links
+description: "Links index"
 links:
   - title: GitHub
     description: GitHub is the world's largest software development platform.
