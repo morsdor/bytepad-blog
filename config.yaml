@@ -1,4 +1,4 @@
-baseurl: "http://localhost:1313/"
+baseurl: "https://bytepad-blog.web.app/"
 languageCode: "en-us"
 paginate: 5
 title: "Bytepad Blog"

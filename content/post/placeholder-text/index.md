@@ -42,9 +42,7 @@ Victa caducifer, malo vulnere contra dicere aurato, ludit regale, voca! Retorsit
 
 Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli Lelegas tu lux. Verbis obstitit intus oblectamina fixis linguisque ausus sperare Echionides cornuaque tenent clausit possit. Omnia putatur. Praeteritae refert ausus; ferebant e primus lora nutat, vici quae mea ipse. Et iter nil spectatae vulnus haerentia iuste et exercebat, sui et.
 
-Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel **mitis temploque** vocatus, inque alis, *oculos nomen* non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides **parte**.
-
-
+Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel **mitis temploque** vocatus, inque alis, _oculos nomen_ non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides **parte**.
 
 ```sh
 hugo mod init github.com/me/my-new-blog
@@ -52,7 +50,7 @@ hugo mod init github.com/me/my-new-blog
 
 Then import the theme as a dependency adding the following line to the `module` section of your site's configuration file.
 
-```toml
+```toml example-bad
 # config.toml
 [[module.imports]]
 path = "github.com/CaiJimmy/hugo-theme-stack/v3"
@@ -69,19 +67,24 @@ This makes Hugo use the latest stable `v3` version of the theme (available in re
 
 To update the theme to the latest version, run the following command:
 
-```sh
+```sh example-good
 hugo mod get -u github.com/CaiJimmy/hugo-theme-stack/v3
 hugo mod tidy
 ```
 
-::: info
-In the future, if a new major version of the theme is released, you will need to manually update the version number in the `path` field.
-:::
+| Name | Roll   | Space  |
+| ---- | ------ | ------ |
+| hes  | hdjhsd | ygycsd |
 
-:tent:
+> **Note:** This is great hello
+> and thank yoo.
+
+hhh
 
 {{< css.inline >}}
+
 <style>
 .canon { background: white; width: 100%; height: auto; }
 </style>
+
 {{< /css.inline >}}
