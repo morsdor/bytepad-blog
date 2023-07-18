@@ -21,9 +21,8 @@ let Stack = {
          */
         menu();
 
-
-        Dialog.initilaiseSignUpDialog();
-
+        if( !sessionStorage.getItem('dialogClosedByUser'))
+            Dialog.initilaiseSignUpDialog();
         const articleContent = document.querySelector('.article-content') as HTMLElement;
         if (articleContent) {
             new StackGallery(articleContent);
