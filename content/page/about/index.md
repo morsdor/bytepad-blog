@@ -15,8 +15,4 @@ menu:
       icon: user
 ---
 
-This is Mritunjay. I'm a full time developer working mostly with Javascript and Vue.js. Looking forward to connect with you all and share some ideas.
-
-You can follow me at
-
- [Twitter](https://twitter.com/morsdor)
+This is Mritunjay. I'm a full time developer working mostly with Javascript and Vue.js. Looking forward to connect with you all and share some ideas. :fire: :rocket:
