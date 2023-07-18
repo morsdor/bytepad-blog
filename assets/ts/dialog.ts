@@ -23,6 +23,7 @@ export class Dialog {
 
     const closeBtn = document.getElementById('loadSignupPopupCloseButton');
     closeBtn.addEventListener('click', () => {
+        sessionStorage.setItem('dialogClosedByUser', 'true');
         Dialog.DialogElement.close();
     })
 
