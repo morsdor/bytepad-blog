@@ -21,7 +21,10 @@ let Stack = {
      */
     menu();
 
-    if (!sessionStorage.getItem("dialogClosedByUser"))
+    if (
+      !localStorage.getItem("dialogClosedByUser") &&
+      !sessionStorage.getItem("dialogClosedByUser")
+    )
       Dialog.initilaiseSignUpDialog();
     const articleContent = document.querySelector(
       ".article-content"
