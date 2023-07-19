@@ -21,13 +21,39 @@ export class Dialog {
 
   public static initilaiseSignUpDialog() {
     const closeBtn = document.getElementById("loadSignupPopupCloseButton");
-    const dialogSubscribeButton = document.getElementById('sib-form') as HTMLFormElement;
+    const dialogSubscribeButton = document.getElementById(
+      "sib-form"
+    ) as HTMLFormElement;
 
-    dialogSubscribeButton.addEventListener('submit', (event) => {
+    dialogSubscribeButton.addEventListener("submit", async (event) => {
       event.preventDefault();
-      localStorage.setItem("dialogClosedByUser", "true");
-      Dialog.DialogElement.close();
-    })
+
+      const target = event.target;
+
+      const payLoad = {
+        firstName: target[0].value,
+        lastName: target[1].value,
+        email: target[2].value,
+      };
+
+      try {
+        const data = await fetch("https://api.bytepad.shop/new-contact", {
+          method: "POST",
+          body: JSON.stringify(payLoad),
+          credentials: 'include',
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        if (data.ok) {
+          localStorage.setItem("dialogClosedByUser", "true");
+          Dialog.DialogElement.close();
+        }
+      } catch (err: any) {
+        console.log(err);
+      }
+    });
 
     closeBtn.addEventListener("click", () => {
       sessionStorage.setItem("dialogClosedByUser", "true");
