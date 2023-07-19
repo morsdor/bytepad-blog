@@ -3,7 +3,6 @@
     "serve": "hugo server",
     "build" : "hugo && npm run pcopy",
     "pcopy": "cp ./robots.txt ./public"
-
   },
 
   "dependencies": {
