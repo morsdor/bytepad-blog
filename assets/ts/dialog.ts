@@ -40,7 +40,6 @@ export class Dialog {
         const data = await fetch("https://api.bytepad.shop/new-contact", {
           method: "POST",
           body: JSON.stringify(payLoad),
-          credentials: 'include',
           headers: {
             "Content-Type": "application/json",
           },
