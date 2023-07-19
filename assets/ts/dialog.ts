@@ -21,7 +21,7 @@ export class Dialog {
 
   public static initilaiseSignUpDialog() {
     const closeBtn = document.getElementById("loadSignupPopupCloseButton");
-    const dialogSubscribeButton = document.getElementById('onLoadSignupPopupForm') as HTMLFormElement;
+    const dialogSubscribeButton = document.getElementById('sib-form') as HTMLFormElement;
 
     dialogSubscribeButton.addEventListener('submit', (event) => {
       event.preventDefault();
