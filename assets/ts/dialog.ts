@@ -20,12 +20,19 @@ export class Dialog {
   }
 
   public static initilaiseSignUpDialog() {
+    const closeBtn = document.getElementById("loadSignupPopupCloseButton");
+    const dialogSubscribeButton = document.getElementById('onLoadSignupPopupForm') as HTMLFormElement;
 
-    const closeBtn = document.getElementById('loadSignupPopupCloseButton');
-    closeBtn.addEventListener('click', () => {
-        sessionStorage.setItem('dialogClosedByUser', 'true');
-        Dialog.DialogElement.close();
+    dialogSubscribeButton.addEventListener('submit', (event) => {
+      event.preventDefault();
+      localStorage.setItem("dialogClosedByUser", "true");
+      Dialog.DialogElement.close();
     })
+
+    closeBtn.addEventListener("click", () => {
+      sessionStorage.setItem("dialogClosedByUser", "true");
+      Dialog.DialogElement.close();
+    });
 
     setTimeout(() => {
       Dialog.DialogElement.showModal();
