@@ -69,9 +69,9 @@ Document
 Once the browser constructs the DOM tree, it proceeds to parse and apply CSS styles to the elements. CSS parsing involves analyzing the CSS code received in the HTTP response and creating a data structure called the CSS Object Model (CSSOM). The CSSOM contains information about CSS rules and their specificity, inheritance, and other properties.
 The styling process includes the following steps:
 
-**Matching**: The browser matches each DOM node with the appropriate CSS rules based on selectors and specificity.
-**Cascading**: The browser determines the final styles for each element by resolving conflicting CSS rules and handling inheritance.
-**Style Calculations**: The browser computes the actual styles, such as colors, dimensions, and positions, for each element based on the matched CSS rules.
+1. **Matching**: The browser matches each DOM node with the appropriate CSS rules based on selectors and specificity.
+2. **Cascading**: The browser determines the final styles for each element by resolving conflicting CSS rules and handling inheritance.
+3. **Style Calculations**: The browser computes the actual styles, such as colors, dimensions, and positions, for each element based on the matched CSS rules.
 
 Let's add some CSS styles to the previous example. Create a file named "styles.css" with the following content:
 
