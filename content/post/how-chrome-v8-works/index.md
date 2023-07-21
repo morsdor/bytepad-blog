@@ -8,7 +8,7 @@ hidden: false
 comments: true
 draft: false
 tags: ["chrome", "v8", "engine", "javascript"]
-categories: ["javascript", "Chrome V8"]
+categories: ["Javascript", "Chrome V8"]
 series: ["Javascript Guide"]
 ---
 
