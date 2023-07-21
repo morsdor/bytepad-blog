@@ -232,7 +232,45 @@ For this example, let's add some JavaScript code to the HTML file. We'll add a s
 
 When the browser executes this JavaScript code, it will change the color of the `<h1>` element to red. This change will trigger additional layout and rendering updates, ensuring that the updated style is reflected on the screen.
 
-I will talk in detail in an upcoming article.
+When a web page is loading, and the browser encounters JavaScript code, it executes the JavaScript in a few different ways, depending on where the script is located and how it's referenced. Here's an overview of how browsers execute JavaScript during page loading:
+
+1. **Synchronous JavaScript Execution:**
+
+When the browser encounters a `<script>` tag in the HTML document without the `async` or `defer` attributes, it loads and executes the JavaScript code synchronously, meaning the code is executed immediately, and the browser halts parsing and rendering until the script has been executed completely.
+
+Example of synchronous JavaScript:
+
+```html
+<script src="your-script.js"></script>
+```
+
+In this case, the browser fetches the "your-script.js" file and executes its code in order. If the script is large or takes a significant amount of time to run, it may delay the page loading and rendering, leading to slower perceived performance.
+
+2. **Asynchronous JavaScript Execution:**  
+   
+When the browser encounters a `<script>` tag with the `async` attribute, it loads the JavaScript file asynchronously. The script is downloaded in the background while the HTML parsing and rendering continue. Once the script is fetched, it is executed immediately, potentially before the entire HTML page has finished loading.
+
+Example of asynchronous JavaScript:
+
+```html
+<script src="your-script.js" async></script>
+```
+
+Asynchronous JavaScript is useful for non-blocking scripts that don't rely on the DOM being fully parsed or the page is completely loaded. However, the execution order of multiple asynchronous scripts is not guaranteed, which can lead to potential issues if scripts depend on each other.
+
+3. **Deferred JavaScript Execution:**
+   
+When the browser encounters a `<script>` tag with the `defer` attribute, it also loads the script asynchronously. However, deferred scripts are guaranteed to execute in the order they appear in the HTML document, but only after the entire HTML document has been parsed.
+
+Example of deferred JavaScript:
+
+```html
+<script src="your-script.js" defer></script>
+```
+
+Deferred JavaScript is particularly useful for scripts that need access to the fully parsed DOM or need to manipulate elements on the page. Since deferred scripts execute in order and after the page is parsed, they won't block the rendering process, leading to improved perceived page load speed.
+
+By executing JavaScript in different ways, browsers can manage the loading and execution of scripts more efficiently, preventing them from blocking other critical resources and improving the overall performance and user experience of web pages. As a best practice, it's essential to use asynchronous or deferred JavaScript loading for non-essential scripts and place critical scripts near the end of the HTML document to ensure faster page rendering.
 
 ## Asynchronous Loading and Rendering Continuity:
 During the rendering process, the browser may also asynchronously load additional resources, such as images, scripts, and stylesheets. Asynchronous loading allows the browser to continue rendering and displaying the page while fetching these additional resources in the background. This approach helps improve the perceived performance of the web page by reducing loading times.
