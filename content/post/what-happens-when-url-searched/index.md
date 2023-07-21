@@ -2,7 +2,7 @@
 title: "What Happens In Your Browser When You Search For An URL"
 description: This article will try to uncover all those steps that your browser performs once you type in the URL and see the content of that website being displayed on your screen
 date: 2023-07-21T17:22:17+05:30
-image: 
+image: what-happens-when-url-is-searched.png
 math: false
 license: 
 hidden: false
@@ -83,7 +83,8 @@ If the web page contains JavaScript code, the browser executes it during the ren
 ### Asynchronous Loading 
 Modern web pages often load additional resources, such as images, scripts, and stylesheets, asynchronously. Asynchronous loading allows the browser to continue rendering and displaying the page while fetching these additional resources in the background. This approach helps improve the perceived performance of the web page by reducing loading times.
 
-### Rendering Continuity: The browser continuously renders the web page as changes occur in the DOM or CSS, such as user interactions, dynamic content updates, or animations. This ensures that the displayed content remains up-to-date and responsive to user actions.
+### Rendering Continuity
+The browser continuously renders the web page as changes occur in the DOM or CSS, such as user interactions, dynamic content updates, or animations. This ensures that the displayed content remains up-to-date and responsive to user actions.
 
 By the end of this rendering process, the web page content is transformed into a visual representation on the screen, and the user can interact with the fully rendered web page, click on links, fill out forms, and perform other actions as intended by the web developers. The rendering process is a complex and multi-step procedure that involves several components of the browser working together to create the user experience. I will write a separate article explaining with code how all of this happens behind the scenes
 
@@ -95,3 +96,6 @@ Once the browser has processed all the resources and constructed the DOM, it dis
 
 ## Persistent Connections and Caching
 Modern browsers often keep persistent connections to web servers and use caching mechanisms to optimize future requests. This allows them to fetch resources more efficiently and reduce loading times for subsequent visits to the same website.
+
+
+In summary, when you search a URL in your browser, it goes through the steps of parsing, DNS resolution, establishing a TCP connection, sending an HTTP request, processing the request on the server, receiving and rendering the response, fetching additional resources, and displaying the final web page on your screen.
