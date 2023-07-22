@@ -43,24 +43,25 @@
 
     <div class="flex">
       <button
-      icon="pi pi-user"
-      class="lg:w-6 formSubmitBtn shadow-2"
-      type="submit"
-      form="sib-form"
-      id="sib-form-submit-button"
-    >
-      SUBSCRIBE
-    </button>
+        icon="pi pi-user"
+        class="lg:w-6 formSubmitBtn shadow-2"
+        type="submit"
+        form="sib-form"
+        id="sib-form-submit-button"
+      >
+        SUBSCRIBE
+      </button>
 
-    <button id="loadSignupPopupCloseButton" class="closeBtnTop shadow-2">
-      Close
-    </button>
+      <button id="loadSignupPopupCloseButton" class="closeBtnTop shadow-2">
+        Close
+      </button>
     </div>
-    
   </form>
 </dialog>
 
 <!-- Google tag (gtag.js) -->
+
+{{ if hugo.IsProduction }}
 <script
   async
   src="https://www.googletagmanager.com/gtag/js?id=G-0R9KRMEPLF"
@@ -74,6 +75,7 @@
 
   gtag("config", "G-0R9KRMEPLF");
 </script>
+{{ end }}
 
 <style scoped>
   #onLoadSignupPopup::backdrop {
@@ -91,7 +93,7 @@
 
   input {
     border-radius: 6px;
-    border: 2px solid #2D14A6;
+    border: 2px solid #2d14a6;
   }
 
   .formSubmitBtn {
