@@ -28,6 +28,8 @@ export class Dialog {
     dialogSubscribeButton.addEventListener("submit", async (event) => {
       event.preventDefault();
 
+      document.getElementById('sib-form-submit-button').innerText = 'SUBSCRIBING...'
+
       const target = event.target;
 
       const payLoad = {
@@ -46,8 +48,10 @@ export class Dialog {
         });
 
         if (data.ok) {
+          document.getElementById('sib-form-submit-button').innerText = 'SUBSCRIBED'
           localStorage.setItem("dialogClosedByUser", "true");
-          Dialog.DialogElement.close();
+          setTimeout(() => Dialog.DialogElement.close(), 500);
+          
         }
       } catch (err: any) {
         console.log(err);
