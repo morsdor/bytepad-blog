@@ -38,7 +38,7 @@ Consider the following example HTML file named "index.html":
 </html>
 ```
 
-When the browser receives this HTML file, it starts the parsing process and constructs the DOM tree. The resulting DOM tree will look like this:
+When the browser receives this HTML file, it starts the parsing process and constructs the DOM tree. The resulting DOM tree will look like this: Just look at the tree.
 
 ```lua
 Document
